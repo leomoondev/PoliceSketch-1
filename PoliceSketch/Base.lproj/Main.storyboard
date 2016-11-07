@@ -66,7 +66,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3NX-uR-RlU">
-                                <rect key="frame" x="49" y="164" width="216" height="100"/>
+                                <rect key="frame" x="55" y="164" width="210" height="100"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1P0-k6-OJJ">
                                 <rect key="frame" x="49" y="272" width="216" height="100"/>

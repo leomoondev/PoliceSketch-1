@@ -32,15 +32,11 @@
     [self.mouthView setImage:[self.currentSketch.mouthArray objectAtIndex:self.currentSketch.currentMouth]];
 }
 
-
-
-
 - (IBAction)eyesNext:(UIButton *)sender {
     
     [self.currentSketch nextEyesImage];
     [self.eyesView setImage:[self.currentSketch.eyesArray objectAtIndex:self.currentSketch.currentEyes]];
 }
-
 
 - (IBAction)eyesPrevious:(UIButton *)sender {
     
