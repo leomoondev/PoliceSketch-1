@@ -8,6 +8,18 @@
 
 #import "LPSCurrentSketch.h"
 
+@interface LPSCurrentSketch()
+
+@property (nonatomic) NSInteger currentEyes;
+@property (nonatomic) NSInteger currentNose;
+@property (nonatomic) NSInteger currentMouth;
+
+@property (nonatomic, strong) NSArray *eyesArray;
+@property (nonatomic, strong) NSArray *noseArray;
+@property (nonatomic, strong) NSArray *mouthArray;
+
+@end
+
 @implementation LPSCurrentSketch
 
 - (instancetype)init
@@ -38,35 +50,53 @@
                             [UIImage imageNamed:@"mouth_5.jpg"], nil];
         
         // Set current image indices
-        _currentEyes = 0;
-        _currentNose = 0;
-        _currentMouth = 0;
+        _currentEyes = 4;
+        _currentNose = 4;
+        _currentMouth = 4;
     }
     return self;
 }
 
--(void)nextEyesImage {
+-(UIImage *)nextEyesImage {
     self.currentEyes = (self.currentEyes + 1) % self.eyesArray.count;
+    return [self.eyesArray objectAtIndex:self.currentEyes];
 }
 
--(void)previousEyesImage {
-    self.currentEyes = (self.currentEyes - 1) % self.eyesArray.count;
+-(UIImage *)previousEyesImage {
+    if (self.currentEyes == 0) {
+        self.currentEyes = (self.eyesArray.count - 1);
+    } else {
+        self.currentEyes = (self.currentEyes - 1) % self.eyesArray.count;
+    }
+    return [self.eyesArray objectAtIndex:self.currentEyes];
 }
 
--(void)nextNoseImage {
+-(UIImage *)nextNoseImage {
     self.currentNose = (self.currentNose + 1) % self.noseArray.count;
+    return [self.noseArray objectAtIndex:self.currentNose];
 }
 
--(void)previousNoseImage {
-    self.currentNose = (self.currentNose - 1) % self.noseArray.count;
+-(UIImage *)previousNoseImage {
+    if (self.currentNose == 0) {
+        self.currentNose = (self.noseArray.count - 1);
+    } else {
+        self.currentNose = (self.currentNose - 1) % self.noseArray.count;
+    }
+    return [self.noseArray objectAtIndex:self.currentNose];
 }
 
--(void)nextMouthImage {
+-(UIImage *)nextMouthImage {
     self.currentMouth = (self.currentMouth + 1) % self.mouthArray.count;
+    return [self.mouthArray objectAtIndex:self.currentMouth];
 }
 
--(void)previousMouthImage {
-    self.currentMouth = (self.currentMouth - 1) % self.mouthArray.count;
+-(UIImage *)previousMouthImage {
+    if (self.currentMouth == 0) {
+        self.currentMouth = (self.mouthArray.count - 1);
+    } else {
+        self.currentMouth = (self.currentMouth - 1) % self.mouthArray.count;
+    }
+    return [self.mouthArray objectAtIndex:self.currentMouth];
 }
 
 

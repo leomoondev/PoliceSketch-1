@@ -10,19 +10,13 @@
 
 @interface LPSCurrentSketch : NSObject
 
-@property (nonatomic) NSInteger currentEyes;
-@property (nonatomic) NSInteger currentNose;
-@property (nonatomic) NSInteger currentMouth;
 
-@property (nonatomic, strong) NSArray *eyesArray;
-@property (nonatomic, strong) NSArray *noseArray;
-@property (nonatomic, strong) NSArray *mouthArray;
 
--(void)nextEyesImage;
--(void)previousEyesImage;
--(void)nextNoseImage;
--(void)previousNoseImage;
--(void)nextMouthImage;
--(void)previousMouthImage;
+-(UIImage *)nextEyesImage;
+-(UIImage *)previousEyesImage;
+-(UIImage *)nextNoseImage;
+-(UIImage *)previousNoseImage;
+-(UIImage *)nextMouthImage;
+-(UIImage *)previousMouthImage;
 
 @end

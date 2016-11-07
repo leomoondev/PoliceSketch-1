@@ -27,45 +27,39 @@
     
     self.currentSketch = [[LPSCurrentSketch alloc] init];
     
-    [self.eyesView setImage:[self.currentSketch.eyesArray objectAtIndex:self.currentSketch.currentEyes]];
-    [self.noseView setImage:[self.currentSketch.noseArray objectAtIndex:self.currentSketch.currentNose]];
-    [self.mouthView setImage:[self.currentSketch.mouthArray objectAtIndex:self.currentSketch.currentMouth]];
+    [self.eyesView setImage:[self.currentSketch nextEyesImage]];
+    [self.noseView setImage:[self.currentSketch nextNoseImage]];
+    [self.mouthView setImage:[self.currentSketch nextMouthImage]];
 }
 
 - (IBAction)eyesNext:(UIButton *)sender {
     
-    [self.currentSketch nextEyesImage];
-    [self.eyesView setImage:[self.currentSketch.eyesArray objectAtIndex:self.currentSketch.currentEyes]];
+    [self.eyesView setImage:[self.currentSketch nextEyesImage]];
 }
 
 - (IBAction)eyesPrevious:(UIButton *)sender {
     
-    [self.currentSketch previousEyesImage];
-    [self.eyesView setImage:[self.currentSketch.eyesArray objectAtIndex:self.currentSketch.currentEyes]];
+    [self.eyesView setImage:[self.currentSketch previousEyesImage]];
 }
 
 - (IBAction)noseNext:(UIButton *)sender {
     
-    [self.currentSketch nextNoseImage];
-    [self.noseView setImage:[self.currentSketch.noseArray objectAtIndex:self.currentSketch.currentNose]];
+    [self.noseView setImage:[self.currentSketch nextNoseImage]];
 }
 
 - (IBAction)nosePrevious:(UIButton *)sender {
     
-    [self.currentSketch previousNoseImage];
-    [self.noseView setImage:[self.currentSketch.noseArray objectAtIndex:self.currentSketch.currentNose]];
+    [self.noseView setImage:[self.currentSketch previousNoseImage]];
 }
 
 - (IBAction)mouthNext:(UIButton *)sender {
     
-    [self.currentSketch nextMouthImage];
-    [self.mouthView setImage:[self.currentSketch.mouthArray objectAtIndex:self.currentSketch.currentMouth]];
+    [self.mouthView setImage:[self.currentSketch nextMouthImage]];
 }
 
 - (IBAction)mouthPrevious:(UIButton *)sender {
     
-    [self.currentSketch previousMouthImage];
-    [self.mouthView setImage:[self.currentSketch.mouthArray objectAtIndex:self.currentSketch.currentMouth]];
+    [self.mouthView setImage:[self.currentSketch previousMouthImage]];
 }
 
 
