@@ -99,6 +99,4 @@
     return [self.mouthArray objectAtIndex:self.currentMouth];
 }
 
-
-
 @end

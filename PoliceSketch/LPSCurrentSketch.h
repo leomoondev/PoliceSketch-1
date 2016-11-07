@@ -10,8 +10,6 @@
 
 @interface LPSCurrentSketch : NSObject
 
-
-
 -(UIImage *)nextEyesImage;
 -(UIImage *)previousEyesImage;
 -(UIImage *)nextNoseImage;
